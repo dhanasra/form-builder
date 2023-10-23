@@ -1,7 +1,7 @@
-import { AppBar, Avatar, Button, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import { GiFlamingSheet } from 'react-icons/gi'
-import { RxShare1, RxEyeOpen, RxTable } from "react-icons/rx";
+import { RxShare1, RxEyeOpen } from "react-icons/rx";
 
 function CustomAppBar(props) {
   return (
