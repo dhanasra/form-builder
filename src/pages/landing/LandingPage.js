@@ -5,7 +5,7 @@ import LandingImage from '../../assets/images/landing.png'
 import { useNavigate } from 'react-router-dom';
 import LogoWhite from '../../assets/images/logo-white.png';
 import theme from '../../utils/theme';
-import useStyles from './style';
+import useStyles from './Style';
 import { useMediaQuery } from '@mui/material';
 
 
