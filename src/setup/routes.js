@@ -1,3 +1,4 @@
+import AuthCallbackPage from "../pages/auth/AuthCallbackPage";
 import FormListPage from "../pages/dashboard/formList/FormListPage";
 import ProfilePage from "../pages/dashboard/profile/ProfilePage";
 import ReportsPage from "../pages/dashboard/reports/ReportsPage";
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     {
         path: '/signin',
         element: <SigninPage/>
+    },
+    {
+        path: '/auth/callback',
+        element: <AuthCallbackPage/>
     },
     {
         path: '/forms',
