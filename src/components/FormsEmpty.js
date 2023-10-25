@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
-import FormImage from '../assets/images/form.png'
+import FormImage from '../assets/images/form-placeholder.png'
 import { FiArrowRight } from "react-icons/fi";
 
 function FormsEmpty(props) {
