@@ -26,6 +26,9 @@ const theme = createTheme({
       },
       fontFamily: 'Poppins',
       fontWeight: 300
+    },
+    body1: {
+      color: '#1116'
     }
 
   },

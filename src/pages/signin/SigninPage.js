@@ -1,20 +1,30 @@
-import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
+import { Box, Button, Divider, Grid, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import { RiLinkedinBoxFill, RiFacebookCircleFill, RiGithubFill } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
 import SignInImage from '../../assets/images/signin.png'
+import useStyles from './style';
+import theme from '../../utils/theme';
 
 function SigninPage() {
-  return (
-    <Container style={{width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-        <Box sx={{width: '600px', padding: '20px', boxShadow: '0px 2px 30px #ccc6', justifyContent: 'center', display:'flex'}}>
-            <Box sx={{width: '380px', textAlign: 'center'}}>
+    const classes = useStyles();
+
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+  return (
+    <Box className={`${classes.wrapper} ${isSmallScreen ? classes.wrapperFull : ''}`}>
+
+        <Box className={`${classes.card} ${isSmallScreen ? classes.cardFull : ''}`}>
+            <Box className={`${classes.content}`}>
                 <Typography variant='h6'>Sign In</Typography>
-                <Typography style={{fontSize: '14px', color: '#1116'}}>to access Forms</Typography>
+                <Typography variant='body1'>to access Forms</Typography>
                 <Box component={'img'} src={SignInImage} width={'100%'} />
-                <Button variant="outlined" startIcon={<FcGoogle />} style={{color: '#000', border: '1px solid #8886', textTransform: 'none', padding: '6px 20px'}}>Continue With Google</Button>
-                <Divider sx={{margin: '24px 30px'}}>Or</Divider>
+                <div
+                    style={{margin: '0 14px'}}>
+                    <Button variant="outlined" startIcon={<FcGoogle />} style={{color: '#333', fontWeight: 400, border: '1px solid #8886', textTransform: 'none', padding: '6px 20px' }} fullWidth>Continue With Google</Button>
+                </div>
+                <Divider sx={{margin: '24px 14px'}}>Or</Divider>
                 <Grid
                     container
                     direction={'row'}
@@ -29,7 +39,7 @@ function SigninPage() {
             </Box>      
         </Box>
 
-    </Container>
+    </Box>
   )
 }
 

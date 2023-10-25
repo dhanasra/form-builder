@@ -5,7 +5,7 @@ import LandingImage from '../../assets/images/landing.png'
 import { useNavigate } from 'react-router-dom';
 import LogoWhite from '../../assets/images/logo-white.png';
 import theme from '../../utils/theme';
-import useStyles from './Style';
+import useStyles from './style';
 import { useMediaQuery } from '@mui/material';
 
 
@@ -20,8 +20,6 @@ function LandingPage() {
     }
 
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
-
-    console.log(isSmallScreen);
 
   return (
     <Box sx={{backgroundColor: '#1c222d', height: '100vh', color: '#fff', display: 'flex', flexDirection: 'column'}}>
