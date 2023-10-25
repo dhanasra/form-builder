@@ -20,7 +20,7 @@ jobs:
           node-version: 18
       
       - name: Install Node.js dependencies
-        run: npm install
+        run: npm install --force
 
       - name: Build the React application
         run: npm run build
