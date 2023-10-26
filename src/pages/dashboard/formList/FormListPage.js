@@ -4,8 +4,11 @@ import Sider from '../common/Sider';
 import { Box } from '@mui/material';
 import FormsEmpty from '../../../components/FormsEmpty';
 import FormCreateDrawer from '../../../components/FormCreateDrawer';
+import { globalConst } from '../../../utils/global';
 
 function FormListPage() {
+
+  console.log(globalConst);
 
   const [open, setOpen] = React.useState(false);
 
