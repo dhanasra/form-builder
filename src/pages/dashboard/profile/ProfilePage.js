@@ -1,8 +1,9 @@
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'
+import { Box, Button, Grid, TextField, Typography, useMediaQuery } from '@mui/material'
 import React, { useState } from 'react'
 import HomeAppBar from '../common/AppBar'
 import Sider from '../common/Sider'
 import { getUser } from '../../../utils/global';
+import theme from '../../../utils/theme';
 
 function ProfilePage() {
 
@@ -17,6 +18,8 @@ function ProfilePage() {
   const [dateFormat, setDateFormat] = useState(user.dateFormat??'')
   const [currency, setCurrency] = useState(user.defaultCurrency??'')
 
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   return (
     <Box>
       <HomeAppBar/>
@@ -28,14 +31,14 @@ function ProfilePage() {
         position: "fixed",
         width: "100vw"
       }}>
-        <Sider/>
+        {!isSmallScreen && <Sider/>}
         <Box 
           component="main"
           sx={{
             display: 'block',
             overflow: 'auto',
             flexGrow: 1,
-            padding: 4,
+            padding: isSmallScreen ? 2: 4,
             background: "#f5f6f6",
           }}
         >
