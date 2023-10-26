@@ -29,17 +29,18 @@ const theme = createTheme({
     },
     body1: {
       color: '#1116'
+    },
+    subtitle2: {
+      color: '#1116',
+      fontSize: '0.8em'
+    },
+    body3: {
+      fontSize: '0.7em',
+      fontFamily: 'Poppins',
+      fontWeight: 400
     }
 
   },
-  palette: { 
-    primary: { 
-        main: '#228B22', 
-    }, 
-    secondary: { 
-        main: '#f50057', 
-    }, 
-  }, 
 })
 
 

@@ -46,7 +46,6 @@ function Sider() {
             <List>
                 {
                     items.map((item)=>{
-                        console.log()
                         return (
                             <ListItemButton 
                                 key={item.path}
