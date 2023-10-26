@@ -1,6 +1,6 @@
 import { AppBar, Avatar, Button, Toolbar, Typography } from '@mui/material'
 import React from 'react'
-import { GiFlamingSheet } from 'react-icons/gi'
+import LogoWhite from '../../../assets/images/logo-white.png';
 import { RxBell } from 'react-icons/rx'
 
 function HomeAppBar() {
@@ -12,7 +12,7 @@ function HomeAppBar() {
             sx={{backgroundColor: "#1c222d", justifyContent: "space-between"}}
         >
                 <div style={{display: 'flex', alignItems: 'center'}}>
-                    <GiFlamingSheet fontSize={'24px'} style={{marginRight: '8px'}}/>
+                    <img src={LogoWhite} alt='Logo' width={20} style={{marginRight: '8px'}}/>
                     <Typography variant='h6' component="div" sx={{ flexGrow: 1, fontSize: '18px' }}>Formly</Typography>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center'}}>
